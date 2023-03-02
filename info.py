@@ -19,7 +19,7 @@ BOT_TOKEN = environ('BOT_TOKEN', '6053122617:AAFp_z8bCpmSIA1sRh6QTDldnyXvhwZ-GPI
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/3f983ef648ec9e7e35f64.jpg')).split()
+PICS = (environ.get('PICS', 'https://te.legra.ph/file/3f983ef648ec9e7e35f64.jpg')).split()
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
@@ -64,6 +64,7 @@ LOG_STR += ("Spell Check Mode Is Enabled, bot will be suggesting related movies 
 LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST_ELM} elements\n" if MAX_LIST_ELM else "Full List of casts and crew will be shown in imdb template, restrict them by adding a value to MAX_LIST_ELM\n")
 LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
 
+UPSTREAM_REPO = environ.get('UPSTREAM_REPO', 'https://github.com/iSmartboiUjjwal/autofilter-and-shortner.git')
 
 AUTO_DELETE_SECONDS = int(environ.get('AUTO_DELETE_SECONDS', 300))
 AUTO_DELETE = environ.get('AUTO_DELETE', True)
